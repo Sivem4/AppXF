@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppXF.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace AppXF.Views
         public V_TabSettings()
         {
             InitializeComponent();
+            BindingContext = new VM_TabSettings();
         }
     }
 }
