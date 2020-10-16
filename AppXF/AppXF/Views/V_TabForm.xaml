@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppXF.Views.V_TabForm"
-             BackgroundColor="#262626"
              xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
-             Title="Form">
+             Title="Form"
+             Style="{DynamicResource DefaultContentPage}">
 
     <b:Interaction.Behaviors>
         <b:BehaviorCollection>
@@ -33,34 +33,24 @@
                     Grid.Column="0"
                     VerticalTextAlignment="Center"
                     Text="Name:"
-                    TextColor="White"
-                    FontSize="20"/>
+                    Style="{DynamicResource DefaultLabel}"/>
                 <Label
                     Grid.Row="1"
                     Grid.Column="0"
                     VerticalTextAlignment="Center"
                     Text="Surname:"
-                    TextColor="White"
-                    FontSize="20"/>
+                Style="{DynamicResource DefaultLabel}"/>
                 <Entry
                     Grid.Row="0"
                     Grid.Column="1"
-                    HorizontalTextAlignment="Center"
                     Placeholder="enter name"
-                    PlaceholderColor="White"
-                    FontSize="20"
-                    FontAttributes="Italic"
-                    TextColor="White" 
+                    Style="{DynamicResource DefaultEntry}"
                     Text="{Binding EntryName}"/>
                 <Entry
                     Grid.Row="1"
                     Grid.Column="1"
-                    HorizontalTextAlignment="Center"
                     Placeholder="enter surname" 
-                    PlaceholderColor="White"
-                    FontSize="20"
-                    FontAttributes="Italic" 
-                    TextColor="White" 
+                    Style="{DynamicResource DefaultEntry}"
                     Text="{Binding EntrySurname}"/>
                 <Button
                     Grid.Row="2" 

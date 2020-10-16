@@ -1,8 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppXF.App">
     <Application.Resources>
+        <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+        <Style x:Key="DefaultContentPage"
+               TargetType="ContentPage">
+            <Setter Property="BackgroundColor"
+                    Value="{DynamicResource PageBackgroundColor}"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="{DynamicResource PrimaryTextColor}"/>
+            <Setter Property="FontSize"
+                    Value="20"/>
+            <Setter Property="HorizontalTextAlignment"
+                    Value="Left"/>
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center"/>
+        </Style>
+        <Style x:Key="DefaultEntry"
+               TargetType="Entry">
+            <Setter Property="TextColor"
+                    Value="{DynamicResource PrimaryTextColor}"/>
+            <Setter Property="FontSize"
+                    Value="20"/>
+            <Setter Property="FontAttributes"
+                    Value="Italic"/>
+            <Setter Property="PlaceholderColor"
+                    Value="{DynamicResource PrimaryTextColor}"/>
+            <Setter Property="HorizontalTextAlignment"
+                    Value="Center"/>
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center"/>
+        </Style>
 
     </Application.Resources>
 </Application>

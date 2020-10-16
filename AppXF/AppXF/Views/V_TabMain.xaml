@@ -7,7 +7,7 @@
             BarBackgroundColor="black"
             SelectedTabColor="#8080ff"
             Title="Main">
-
+    <v:V_TabSettings/>
     <v:V_TabForm/>
     <v:V_TabList/>
 </TabbedPage>
