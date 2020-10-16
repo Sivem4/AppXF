@@ -18,8 +18,7 @@
             <Setter Property="VerticalTextAlignment"
                     Value="Center"/>
         </Style>
-        <Style x:Key="DefaultEntry"
-               TargetType="Entry">
+        <Style TargetType="Entry">
             <Setter Property="TextColor"
                     Value="{DynamicResource PrimaryTextColor}"/>
             <Setter Property="FontSize"
@@ -33,6 +32,23 @@
             <Setter Property="VerticalTextAlignment"
                     Value="Center"/>
         </Style>
-
+        <Style TargetType="Switch">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="On">
+                            <VisualState.Setters>
+                                <Setter Property="ThumbColor" Value="{DynamicResource SwitchOnColor}"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Off">
+                            <VisualState.Setters>
+                                <Setter Property="ThumbColor" Value="{DynamicResource SwitchOffColor}"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

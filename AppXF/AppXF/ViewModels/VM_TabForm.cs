@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace AppXF.ViewModels
 {
-    class VM_TabForm : VM_TabMain, INotifyPropertyChanged
+    class VM_TabForm : VM_TabMain
     {
         public VM_TabForm()
         {
