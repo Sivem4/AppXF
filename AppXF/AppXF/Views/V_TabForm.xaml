@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppXF.Views.V_TabForm"
+             BackgroundColor="#262626"
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
+             Title="Form">
+
+    <b:Interaction.Behaviors>
+        <b:BehaviorCollection>
+            <b:EventToCommand EventName="Appearing" Command="{Binding ClearFormCommand}" />
+        </b:BehaviorCollection>
+    </b:Interaction.Behaviors>
+    
+    <ContentPage.Content>
+        <FlexLayout
+            Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="250"/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalTextAlignment="Center"
+                    Text="Name:"
+                    TextColor="White"
+                    FontSize="20"/>
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    VerticalTextAlignment="Center"
+                    Text="Surname:"
+                    TextColor="White"
+                    FontSize="20"/>
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="enter name"
+                    PlaceholderColor="White"
+                    FontSize="20"
+                    FontAttributes="Italic"
+                    TextColor="White" 
+                    Text="{Binding EntryName}"/>
+                <Entry
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="enter surname" 
+                    PlaceholderColor="White"
+                    FontSize="20"
+                    FontAttributes="Italic" 
+                    TextColor="White" 
+                    Text="{Binding EntrySurname}"/>
+                <Button
+                    Grid.Row="2" 
+                    Grid.ColumnSpan="2"
+                    CornerRadius="10"
+                    Text="Add"
+                    FontSize="20" 
+                    FontAttributes="Bold"
+                    Margin="0, 20, 0, 0"
+                    BackgroundColor="#8080ff" 
+                    TextColor="white"
+                    Command="{Binding AddPersonCommand}"/>
+                <Label Grid.Row="3"
+                       Grid.ColumnSpan="2" 
+                       Margin="20"
+                       HorizontalTextAlignment="Center"
+                       Text="Added succesfully" 
+                       FontSize="18"
+                       TextColor="#66ff66" 
+                       IsVisible="{Binding LabelStatusVisibility}"/>
+            </Grid>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
