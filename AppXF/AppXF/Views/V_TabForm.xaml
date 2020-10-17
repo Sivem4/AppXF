@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppXF.Views.V_TabForm"
              xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
-             Title="Form"
-             Style="{DynamicResource DefaultContentPage}">
-    
+             Title="Form">
+
     <!--Using Corcav.behaviors library for refreshing page-->
     <b:Interaction.Behaviors>
         <b:BehaviorCollection>
@@ -63,11 +62,9 @@
                 <Label 
                     Grid.Row="3"
                     Grid.ColumnSpan="2" 
-                    HorizontalTextAlignment="Center"
-                    Text="Added succesfully" 
-                    Padding="20"
-                    FontSize="18"
-                    TextColor="#66ff66" 
+                    Text="Added succesfully"
+                    Margin="20"
+                    Style="{DynamicResource SmallLabel}"
                     IsVisible="{Binding LabelStatusVisibility}"/>
             </Grid>
         </FlexLayout>

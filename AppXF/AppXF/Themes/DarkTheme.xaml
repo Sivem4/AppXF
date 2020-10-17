@@ -1,15 +1,23 @@
 ﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     x:Class="AppXF.Themes.DarkTheme">
-    <Color x:Key="PageBackgroundColor">#33334d</Color>
-    <Color x:Key="NavigationBarColor">Teal</Color>
-    <Color x:Key="PrimaryColor">Teal</Color>
-    <Color x:Key="SecondaryColor">White</Color>
-    <Color x:Key="PrimaryTextColor">White</Color>
+
+    <!--pages-->
+    <Color x:Key="ContentPageBackgroundColor">Black</Color>
+    <Color x:Key="TabbedPageBackgroundColor">Black</Color>
+    <Color x:Key="TabbedPageSelectedColor">DarkMagenta</Color>
+    <Color x:Key="TabbedPageUnselectedColor">LightGray</Color>
+
+    <!--text-->
+    <Color x:Key="PrimaryTextColor">DarkMagenta</Color>
     <Color x:Key="SecondaryTextColor">White</Color>
     <Color x:Key="TransparentColor">Transparent</Color>
-    <Color x:Key="SwitchOnColor">MediumSpringGreen</Color>
-    <Color x:Key="SwitchOffColor">Red</Color>
-    <Color x:Key="ButtonBackgroundColor">#8080ff</Color>
-    <Color x:Key="ButtonTextColor">White</Color>
+
+    <!--switch-->
+    <Color x:Key="SwitchOnColor">MediumAquaMarine</Color>
+    <Color x:Key="SwitchOffColor">Brown</Color>
+
+    <!--button-->
+    <Color x:Key="ButtonBackgroundColor">LightGray</Color>
+    <Color x:Key="ButtonBorderColor">Black</Color>
 </ResourceDictionary>

@@ -4,58 +4,59 @@
     <Application.Resources>
         
         <!--Setting default theme-->
+        <!--TODO remove switching bug when light is default-->
         <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
-        
+
         <!--Page styles-->
-        <Style x:Key="DefaultContentPage"
-               TargetType="ContentPage">
-            <Setter Property="BackgroundColor"
-                    Value="{DynamicResource PageBackgroundColor}"/>
+        <!--ApplyToDerivedTypes="True" is for setting implicit style for pages-->
+        <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor" Value="{DynamicResource ContentPageBackgroundColor}"/>
         </Style>
-        
+        <!--Cant make work ApplyToDerivedTypes for tabbed page, set x:Key-->
+        <Style TargetType="TabbedPage" x:Key="DefaultTabbedPage">
+            <Setter Property="BarBackgroundColor" Value="{DynamicResource TabbedPageBackgroundColor}"/>
+            <Setter Property="SelectedTabColor" Value="{DynamicResource TabbedPageSelectedColor}"/>
+            <Setter Property="UnselectedTabColor" Value="{DynamicResource TabbedPageUnselectedColor}"/>
+        </Style>
+
         <!--Label styles-->
         <Style TargetType="Label">
-            <Setter Property="TextColor"
-                    Value="{DynamicResource PrimaryTextColor}"/>
-            <Setter Property="FontSize"
-                    Value="20"/>
-            <Setter Property="HorizontalTextAlignment"
-                    Value="Left"/>
-            <Setter Property="VerticalTextAlignment"
-                    Value="Center"/>
+            <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalTextAlignment" Value="Left"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
         </Style>
-        
+        <Style TargetType="Label" x:Key="SmallLabel">
+            <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+
         <!--Entry stales-->
         <Style TargetType="Entry">
-            <Setter Property="TextColor"
-                    Value="{DynamicResource PrimaryTextColor}"/>
-            <Setter Property="FontSize"
-                    Value="20"/>
-            <Setter Property="FontAttributes"
-                    Value="Italic"/>
-            <Setter Property="PlaceholderColor"
-                    Value="{DynamicResource PrimaryTextColor}"/>
-            <Setter Property="HorizontalTextAlignment"
-                    Value="Center"/>
-            <Setter Property="VerticalTextAlignment"
-                    Value="Center"/>
+            <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontAttributes" Value="Italic"/>
+            <Setter Property="PlaceholderColor" Value="{DynamicResource PrimaryTextColor}"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
         </Style>
         
         <!--Button styles-->
         <Style TargetType="Button">
-            <Setter Property="CornerRadius"
-                    Value="10"/>
-            <Setter Property="FontSize"
-                    Value="20"/>
-            <Setter Property="FontAttributes"
-                    Value="Bold"/>
-            <Setter Property="BackgroundColor"
-                    Value="{DynamicResource ButtonBackgroundColor}"/>
-            <Setter Property="TextColor"
-                    Value="{DynamicResource ButtonTextColor}"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="BackgroundColor" Value="{DynamicResource ButtonBackgroundColor}"/>
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+            <Setter Property="BorderColor" Value="{DynamicResource ButtonBorderColor}"/>
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="Visual" Value="" />
         </Style>
         
         <!--Switch styles-->
+        <!--VisualStateManager is used for changing color depending on switch state-->
         <Style TargetType="Switch">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
