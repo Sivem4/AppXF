@@ -5,7 +5,8 @@
              xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
              Title="Form"
              Style="{DynamicResource DefaultContentPage}">
-
+    
+    <!--Using Corcav.behaviors library for refreshing page-->
     <b:Interaction.Behaviors>
         <b:BehaviorCollection>
             <b:EventToCommand EventName="Appearing" Command="{Binding ClearFormCommand}" />

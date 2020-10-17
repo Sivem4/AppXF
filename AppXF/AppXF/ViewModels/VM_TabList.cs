@@ -6,11 +6,16 @@ namespace AppXF.ViewModels
 {
     class VM_TabList : VM_TabMain
     {
+        /// <summary>
+        /// Assign methods to commands
+        /// </summary>
         public VM_TabList()
         {
             DeletePersonCommand = new Command<M_Person>(DeletePerson);
         }
-
+        /// <summary>
+        /// Keep track of people in the list
+        /// </summary>
         public ObservableCollection<M_Person> People
         {
             get

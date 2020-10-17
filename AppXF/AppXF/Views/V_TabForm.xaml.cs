@@ -10,6 +10,8 @@ namespace AppXF.Views
         public V_TabForm()
         {
             InitializeComponent();
+
+            //Setting binding context to viewmodel
             BindingContext = new VM_TabForm();
         }
     }

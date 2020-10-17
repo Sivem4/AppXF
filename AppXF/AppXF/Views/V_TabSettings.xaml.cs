@@ -11,6 +11,8 @@ namespace AppXF.Views
         public V_TabSettings()
         {
             InitializeComponent();
+
+            //Setting binding context to viewmodel
             BindingContext = new VM_TabSettings();
         }
     }

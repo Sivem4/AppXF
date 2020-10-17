@@ -2,6 +2,9 @@
 
 namespace AppXF.Models
 {
+    /// <summary>
+    /// Keeping track of people in list across all viewmodels
+    /// </summary>
     public static class MS_Common
     {
         static MS_Common()

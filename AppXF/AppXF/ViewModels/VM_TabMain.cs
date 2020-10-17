@@ -2,6 +2,9 @@
 
 namespace AppXF.ViewModels
 {
+    /// <summary>
+    /// Main viewmodel that implements INotifyPropertyChanged and is parent for other viewmodels
+    /// </summary>
     class VM_TabMain : INotifyPropertyChanged
     {
         public VM_TabMain()
@@ -10,6 +13,11 @@ namespace AppXF.ViewModels
         }
         
         public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Fire control's event from viewmodel
+        /// </summary>
+        /// <param name="propertyName"></param>
         protected void OnPropertyChanged(string propertyName)
         {
             if (!(PropertyChanged is null))

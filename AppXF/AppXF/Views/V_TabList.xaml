@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--x:Name is a must for setting binding context of viewmodel for button rather then binding context of People observablecollection-->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppXF.Views.V_TabList"
@@ -48,6 +49,8 @@
                                         TextColor="White"
                                         Text="{Binding Surname}"
                                         d:Text="{Binding .}"/>
+
+                                    <!--Setting proper binding context for button, CommandParameter is a must for passing proper M_Person into command-->
                                     <Button
                                         Grid.Row="0"
                                         Grid.Column="2"

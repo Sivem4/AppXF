@@ -1,5 +1,8 @@
 ﻿namespace AppXF.Models
 {
+    /// <summary>
+    /// Person model class
+    /// </summary>
     public class M_Person
     {
         public M_Person(string name, string surname)

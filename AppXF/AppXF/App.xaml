@@ -2,12 +2,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppXF.App">
     <Application.Resources>
+        
+        <!--Setting default theme-->
         <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+        
+        <!--Page styles-->
         <Style x:Key="DefaultContentPage"
                TargetType="ContentPage">
             <Setter Property="BackgroundColor"
                     Value="{DynamicResource PageBackgroundColor}"/>
         </Style>
+        
+        <!--Label styles-->
         <Style TargetType="Label">
             <Setter Property="TextColor"
                     Value="{DynamicResource PrimaryTextColor}"/>
@@ -18,6 +24,8 @@
             <Setter Property="VerticalTextAlignment"
                     Value="Center"/>
         </Style>
+        
+        <!--Entry stales-->
         <Style TargetType="Entry">
             <Setter Property="TextColor"
                     Value="{DynamicResource PrimaryTextColor}"/>
@@ -32,6 +40,8 @@
             <Setter Property="VerticalTextAlignment"
                     Value="Center"/>
         </Style>
+        
+        <!--Button styles-->
         <Style TargetType="Button">
             <Setter Property="CornerRadius"
                     Value="10"/>
@@ -44,6 +54,8 @@
             <Setter Property="TextColor"
                     Value="{DynamicResource ButtonTextColor}"/>
         </Style>
+        
+        <!--Switch styles-->
         <Style TargetType="Switch">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>

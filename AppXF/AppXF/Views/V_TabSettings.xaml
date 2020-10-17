@@ -26,11 +26,14 @@
                 <Switch Grid.Row="0"
                         Grid.Column="1"
                         IsToggled="{Binding ThemeSwitchStatus}">
+                    
+                    <!--Using Corcav.behaviors library for binding into Switch status change-->
                     <b:Interaction.Behaviors>
                         <b:BehaviorCollection>
                             <b:EventToCommand EventName="Toggled" Command="{Binding ChangeThemeCommand}" />
                         </b:BehaviorCollection>
                     </b:Interaction.Behaviors>
+                    
                 </Switch>
             </Grid>
         </FlexLayout>
