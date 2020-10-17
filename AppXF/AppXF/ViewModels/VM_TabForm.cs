@@ -1,10 +1,4 @@
 ﻿using AppXF.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace AppXF.ViewModels
@@ -58,8 +52,7 @@ namespace AppXF.ViewModels
         }
         void AddPerson()
         {
-            var person = new M_Person(EntryName, EntrySurname);
-            MS_Common.People.Add(person);
+            MS_Common.People.Add(new M_Person(EntryName, EntrySurname));
             ClearForm();
             LabelStatusVisibility = true;     
         }

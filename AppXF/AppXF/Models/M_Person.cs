@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AppXF.Models
+﻿namespace AppXF.Models
 {
     public class M_Person
     {

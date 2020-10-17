@@ -11,4 +11,6 @@
     <Color x:Key="TransparentColor">Transparent</Color>
     <Color x:Key="SwitchOnColor">MediumSpringGreen</Color>
     <Color x:Key="SwitchOffColor">Red</Color>
+    <Color x:Key="ButtonBackgroundColor">#8080ff</Color>
+    <Color x:Key="ButtonTextColor">White</Color>
 </ResourceDictionary>

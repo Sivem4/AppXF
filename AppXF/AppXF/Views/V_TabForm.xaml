@@ -55,13 +55,8 @@
                 <Button
                     Grid.Row="2" 
                     Grid.ColumnSpan="2"
-                    CornerRadius="10"
                     Text="Add"
-                    FontSize="20" 
-                    FontAttributes="Bold"
                     Margin="0, 20, 0, 0"
-                    BackgroundColor="#8080ff" 
-                    TextColor="white"
                     Command="{Binding AddPersonCommand}"/>
                 <Label Grid.Row="3"
                        Grid.ColumnSpan="2" 

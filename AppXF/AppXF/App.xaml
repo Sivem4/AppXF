@@ -32,6 +32,18 @@
             <Setter Property="VerticalTextAlignment"
                     Value="Center"/>
         </Style>
+        <Style TargetType="Button">
+            <Setter Property="CornerRadius"
+                    Value="10"/>
+            <Setter Property="FontSize"
+                    Value="20"/>
+            <Setter Property="FontAttributes"
+                    Value="Bold"/>
+            <Setter Property="BackgroundColor"
+                    Value="{DynamicResource ButtonBackgroundColor}"/>
+            <Setter Property="TextColor"
+                    Value="{DynamicResource ButtonTextColor}"/>
+        </Style>
         <Style TargetType="Switch">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>

@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppXF.Views.V_TabList"
+             x:Name="TabList"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
@@ -14,6 +15,14 @@
                 x:Name="lvPeople"
                 ItemsSource="{Binding People}"
                 HasUnevenRows="True">
+                <d:ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Row 1</x:String>
+                        <x:String>Row 2</x:String>
+                        <x:String>Row 3</x:String>
+                        <x:String>Row 4</x:String>
+                    </x:Array>
+                </d:ListView.ItemsSource>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -25,18 +34,26 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="100"/>
                                         <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="100"/>
                                     </Grid.ColumnDefinitions>
-                                    <Label
-                                    Grid.Row="0"
-                                    Grid.Column="0"
-                                    TextColor="White"
-                                    Text="{Binding Name}"/>
-                                    <Label
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    TextColor="White"
-                                    Text="{Binding Surname}"
-                                        />
+                                    <Label Grid.Row="0"
+                                           Grid.Column="0"
+                                           TextColor="White"
+                                           Text="{Binding Name}"
+                                           d:Text="{Binding .}"/>
+                                    <Label Grid.Row="0"
+                                           Grid.Column="1"
+                                           TextColor="White"
+                                           Text="{Binding Surname}"
+                                           d:Text="{Binding .}"/>
+                                    <Button Grid.Row="0"
+                                            Grid.Column="2"
+                                            HeightRequest="40"
+                                            FontSize="15"
+                                            Margin="0, 5, 0, 0"
+                                            Text="Delete"
+                                            Command="{Binding BindingContext.DeletePersonCommand, Source={x:Reference Name=TabList}}"
+                                            CommandParameter="{Binding .}"/>
                                 </Grid>
                             </StackLayout>
                         </ViewCell>

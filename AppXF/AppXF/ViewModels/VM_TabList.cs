@@ -1,16 +1,14 @@
 ﻿using AppXF.Models;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
+using Xamarin.Forms;
 
 namespace AppXF.ViewModels
 {
-    class VM_TabList:VM_TabMain
+    class VM_TabList : VM_TabMain
     {
         public VM_TabList()
         {
-            
+            DeletePersonCommand = new Command<M_Person>(DeletePerson);
         }
 
         public ObservableCollection<M_Person> People
@@ -19,6 +17,12 @@ namespace AppXF.ViewModels
             {
                 return MS_Common.People;
             }
+        }
+        public Command<M_Person> DeletePersonCommand { get; }
+
+        void DeletePerson(M_Person person)
+        {
+            MS_Common.People.Remove(person);
         }
     }
 }
