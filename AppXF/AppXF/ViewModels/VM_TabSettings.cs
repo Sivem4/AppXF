@@ -1,6 +1,7 @@
 ﻿using AppXF.Themes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
@@ -12,7 +13,18 @@ namespace AppXF.ViewModels
         {
             ChangeThemeCommand = new Command(ChangeTheme);
         }
+        string themeSwitchLabel;
         bool themeSwitchStatus;
+
+        public string ThemeSwitchLabel
+        {
+            get { return themeSwitchLabel; }
+            set
+            {
+                themeSwitchLabel = value;
+                OnPropertyChanged(nameof(ThemeSwitchLabel));
+            }
+        }
         public bool ThemeSwitchStatus
         {
             get { return themeSwitchStatus; }
@@ -30,7 +42,14 @@ namespace AppXF.ViewModels
             if (mergedDictionaries != null)
             {
                 mergedDictionaries.Clear();
-                mergedDictionaries.Add(new LightTheme());
+                if (ThemeSwitchStatus)
+                {
+                    mergedDictionaries.Add(new LightTheme());
+                }
+                else
+                {
+                    mergedDictionaries.Add(new DarkTheme());
+                }
             }
         }
     }

@@ -3,14 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppXF.Views.V_TabSettings"
              Title="Settings"
-             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors" xmlns:local="clr-namespace:AppXF.Behaviors"
              Style="{DynamicResource DefaultContentPage}">
-    
-    <b:Interaction.Behaviors>
-        <b:BehaviorCollection>
-            <b:EventToCommand EventName="IsToggled" Command="{Binding ChangeThemeCommand}" />
-        </b:BehaviorCollection>
-    </b:Interaction.Behaviors>
     
 <ContentPage.Content>
         <FlexLayout Direction="Column"
@@ -27,15 +21,17 @@
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0"
                        Grid.Column="0"
-                       Text="Set Light Mode"
+                       Text="Set Light Theme"
                        Style="{DynamicResource DefaultLabel}"/>
-                <!--<Switch Grid.Row="0"
+                <Switch Grid.Row="0"
                         Grid.Column="1"
-                        IsToggled="False"/>-->
-                <Button Grid.Row="0"
-                        Grid.Column="1"
-                        Text="Switch Theme"
-                        Command="{Binding ChangeThemeCommand}"/>
+                        IsToggled="{Binding ThemeSwitchStatus}">
+                    <b:Interaction.Behaviors>
+                        <b:BehaviorCollection>
+                            <b:EventToCommand EventName="Toggled" Command="{Binding ChangeThemeCommand}" />
+                        </b:BehaviorCollection>
+                    </b:Interaction.Behaviors>
+                </Switch>
             </Grid>
         </FlexLayout>
     </ContentPage.Content>
