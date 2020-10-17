@@ -20,7 +20,7 @@ namespace AppXF.ViewModels
         /// <param name="propertyName"></param>
         protected void OnPropertyChanged(string propertyName)
         {
-            if (!(PropertyChanged is null))
+            if (PropertyChanged != null)
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
