@@ -23,6 +23,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="200"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -58,14 +59,15 @@
                     Text="Add"
                     Margin="0, 20, 0, 0"
                     Command="{Binding AddPersonCommand}"/>
-                <Label Grid.Row="3"
-                       Grid.ColumnSpan="2" 
-                       Margin="20"
-                       HorizontalTextAlignment="Center"
-                       Text="Added succesfully" 
-                       FontSize="18"
-                       TextColor="#66ff66" 
-                       IsVisible="{Binding LabelStatusVisibility}"/>
+                <Label 
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2" 
+                    HorizontalTextAlignment="Center"
+                    Text="Added succesfully" 
+                    Padding="20"
+                    FontSize="18"
+                    TextColor="#66ff66" 
+                    IsVisible="{Binding LabelStatusVisibility}"/>
             </Grid>
         </FlexLayout>
     </ContentPage.Content>
