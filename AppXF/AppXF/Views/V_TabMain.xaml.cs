@@ -8,9 +8,6 @@ namespace AppXF.Views
         public V_TabMain()
         {
             InitializeComponent();
-
-            //Setting binding context to viewmodel
-            BindingContext = new VM_TabMain();
         }
     }
 }

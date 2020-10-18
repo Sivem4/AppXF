@@ -54,7 +54,7 @@
                                         Grid.Column="2"
                                         HeightRequest="40"
                                         FontSize="12"
-                                        Margin="5, 5, 5, 5"
+                                        Margin="5"
                                         Text="Delete"
                                         Command="{Binding BindingContext.DeletePersonCommand, Source={x:Reference Name=TabList}}"
                                         CommandParameter="{Binding .}"/>

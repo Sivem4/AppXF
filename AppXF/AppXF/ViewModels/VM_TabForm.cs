@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace AppXF.ViewModels
 {
-    class VM_TabForm : VM_TabMain
+    class VM_TabForm : VM_BasePage
     {
         /// <summary>
         /// Assign methods to commands
@@ -22,8 +22,11 @@ namespace AppXF.ViewModels
             get { return entryName; }
             set
             {
-                entryName = value;
-                OnPropertyChanged(nameof(EntryName));
+                if (entryName != value)
+                {
+                    entryName = value;
+                    OnPropertyChanged(nameof(EntryName));
+                }
             }
         }
         public string EntrySurname
@@ -31,8 +34,11 @@ namespace AppXF.ViewModels
             get { return entrySurname; }
             set
             {
-                entrySurname = value;
-                OnPropertyChanged(nameof(EntrySurname));
+                if (entrySurname != value)
+                {
+                    entrySurname = value;
+                    OnPropertyChanged(nameof(EntrySurname));
+                }
             }
         }
         public bool LabelStatusVisibility

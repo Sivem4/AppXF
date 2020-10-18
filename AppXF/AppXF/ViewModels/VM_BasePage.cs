@@ -5,9 +5,9 @@ namespace AppXF.ViewModels
     /// <summary>
     /// Main viewmodel that implements INotifyPropertyChanged and is parent for other viewmodels
     /// </summary>
-    class VM_TabMain : INotifyPropertyChanged
+    abstract class VM_BasePage : INotifyPropertyChanged
     {
-        public VM_TabMain()
+        public VM_BasePage()
         {
                         
         }

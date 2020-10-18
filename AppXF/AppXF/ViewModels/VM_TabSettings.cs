@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace AppXF.ViewModels
 {
-    class VM_TabSettings : VM_TabForm
+    class VM_TabSettings : VM_BasePage
     {
         /// <summary>
         /// Assign methods to commands
@@ -15,25 +15,19 @@ namespace AppXF.ViewModels
         {
             ChangeThemeCommand = new Command(ChangeTheme);
         }
-        string themeSwitchLabel;
+
         bool themeSwitchStatus;
 
-        public string ThemeSwitchLabel
-        {
-            get { return themeSwitchLabel; }
-            set
-            {
-                themeSwitchLabel = value;
-                OnPropertyChanged(nameof(ThemeSwitchLabel));
-            }
-        }
         public bool ThemeSwitchStatus
         {
             get { return themeSwitchStatus; }
             set
             {
-                themeSwitchStatus = value;
-                OnPropertyChanged(nameof(ThemeSwitchStatus));
+                if (themeSwitchStatus != value)
+                {
+                    themeSwitchStatus = value;
+                    OnPropertyChanged(nameof(ThemeSwitchStatus));
+                }
             }
         }
         public Command ChangeThemeCommand { get; }
