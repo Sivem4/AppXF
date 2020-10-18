@@ -35,7 +35,7 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="100"/>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="80"/>
                                     </Grid.ColumnDefinitions>
                                     <Label
                                         Grid.Row="0"
@@ -53,8 +53,8 @@
                                         Grid.Row="0"
                                         Grid.Column="2"
                                         HeightRequest="40"
-                                        FontSize="15"
-                                        Margin="0, 5, 0, 0"
+                                        FontSize="12"
+                                        Margin="5, 5, 5, 5"
                                         Text="Delete"
                                         Command="{Binding BindingContext.DeletePersonCommand, Source={x:Reference Name=TabList}}"
                                         CommandParameter="{Binding .}"/>

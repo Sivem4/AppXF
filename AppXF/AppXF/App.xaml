@@ -4,8 +4,8 @@
     <Application.Resources>
         
         <!--Setting default theme-->
-        <!--TODO remove switching bug when light is default-->
-        <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+        <!--TODO remove switching bug when dark is default-->
+        <ResourceDictionary Source="Themes/LightTheme.xaml"/>
 
         <!--Page styles-->
         <!--ApplyToDerivedTypes="True" is for setting implicit style for pages-->

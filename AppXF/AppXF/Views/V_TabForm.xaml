@@ -16,7 +16,8 @@
         <FlexLayout
             Direction="Column"
             AlignItems="Center"
-            JustifyContent="SpaceEvenly">
+            JustifyContent="SpaceEvenly"
+            Margin="10">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
@@ -27,7 +28,7 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
                 <Label
                     Grid.Row="0"
@@ -57,7 +58,7 @@
                     Grid.Row="2" 
                     Grid.ColumnSpan="2"
                     Text="Add"
-                    Margin="0, 20, 0, 0"
+                    Margin="15"
                     Command="{Binding AddPersonCommand}"/>
                 <Label 
                     Grid.Row="3"

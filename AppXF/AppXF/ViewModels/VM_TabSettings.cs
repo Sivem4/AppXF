@@ -1,5 +1,7 @@
 ﻿using AppXF.Themes;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 
 namespace AppXF.ViewModels
@@ -42,18 +44,17 @@ namespace AppXF.ViewModels
         void ChangeTheme()
         {
             ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
+
             if (mergedDictionaries != null)
             {
-                //Before setting new theme, clearing current theme is a must
                 mergedDictionaries.Clear();
-
                 if (ThemeSwitchStatus)
                 {
-                    mergedDictionaries.Add(new LightTheme());
+                    mergedDictionaries.Add(new DarkTheme());
                 }
                 else
                 {
-                    mergedDictionaries.Add(new DarkTheme());
+                    mergedDictionaries.Add(new LightTheme());
                 }
             }
         }

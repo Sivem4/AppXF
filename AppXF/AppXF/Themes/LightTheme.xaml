@@ -3,7 +3,7 @@
                     x:Class="AppXF.Themes.LightTheme">
 
     <!--pages-->
-    <Color x:Key="ContentPageBackgroundColor">White</Color>
+    <Color x:Key="ContentPageBackgroundColor">GhostWhite</Color>
     <Color x:Key="TabbedPageBackgroundColor">MintCream</Color>
     <Color x:Key="TabbedPageSelectedColor">MediumAquaMArine</Color>
     <Color x:Key="TabbedPageUnselectedColor">DimGray</Color>
