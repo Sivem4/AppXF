@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace AppXF.ViewModels
 {
-    class VM_TabList : VM_BasePage
+    class VM_TabList : VM_BaseModel
     {
         /// <summary>
         /// Assign methods to commands

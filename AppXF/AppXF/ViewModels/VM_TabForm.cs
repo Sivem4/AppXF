@@ -1,9 +1,10 @@
 ﻿using AppXF.Models;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace AppXF.ViewModels
 {
-    class VM_TabForm : VM_BasePage
+    class VM_TabForm : VM_BaseModel
     {
         /// <summary>
         /// Assign methods to commands
@@ -11,7 +12,7 @@ namespace AppXF.ViewModels
         public VM_TabForm()
         {
             ClearFormCommand = new Command(ClearForm);
-            AddPersonCommand = new Command(AddPerson);
+            AddPersonCommand = new Command(async () => await AddPerson());
         }
 
         string entryName;
@@ -66,11 +67,15 @@ namespace AppXF.ViewModels
         /// <summary>
         /// Add person to list, display conformation label
         /// </summary>
-        void AddPerson()
+        async Task AddPerson()
         {
-            MS_Common.People.Add(new M_Person(EntryName, EntrySurname));
+            var person = new M_Person() { Name = EntryName, Surname = EntrySurname };
+            MS_Common.People.Add(person);
             ClearForm();
-            LabelStatusVisibility = true;     
+            App.Database.SavePersonAsync(person).Wait();
+            LabelStatusVisibility = true;
+            await Task.Delay(1000);
+            LabelStatusVisibility = false;
         }
     }
 }

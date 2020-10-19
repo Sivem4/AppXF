@@ -7,10 +7,9 @@ namespace AppXF.Models
     /// </summary>
     public class M_Person
     {
-        public M_Person(string name, string surname)
+        public M_Person()
         {
-            this.Name = name;
-            this.Surname = surname;
+
         }
         [PrimaryKey, AutoIncrement]
         public int PersonID { get; set; }
