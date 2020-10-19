@@ -1,4 +1,6 @@
-﻿namespace AppXF.Models
+﻿using SQLite;
+
+namespace AppXF.Models
 {
     /// <summary>
     /// Person model class
@@ -10,6 +12,8 @@
             this.Name = name;
             this.Surname = surname;
         }
+        [PrimaryKey, AutoIncrement]
+        public int PersonID { get; set; }
         public string Name { get; set; }
 
         public string Surname { get; set; }
