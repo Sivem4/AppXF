@@ -23,7 +23,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="70"/>
                     <RowDefinition Height="200"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -64,7 +64,6 @@
                     Grid.Row="3"
                     Grid.ColumnSpan="2" 
                     Text="Added succesfully"
-                    Margin="20"
                     Style="{DynamicResource SmallLabel}"
                     IsVisible="{Binding LabelStatusVisibility}"/>
             </Grid>

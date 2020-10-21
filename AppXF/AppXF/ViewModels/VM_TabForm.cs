@@ -65,17 +65,25 @@ namespace AppXF.ViewModels
         }
 
         /// <summary>
+        /// Clear form when changing tab
+        /// </summary>
+        async Task ShowLabel(int miliseconds)
+        {
+            LabelStatusVisibility = true;
+            await Task.Delay(miliseconds);
+            LabelStatusVisibility = false;
+        }
+
+        /// <summary>
         /// Add person to list, display conformation label
         /// </summary>
         async Task AddPerson()
         {
             var person = new M_Person() { Name = EntryName, Surname = EntrySurname };
             MS_Common.People.Add(person);
+            await App.Database.SavePersonAsync(person);
             ClearForm();
-            App.Database.SavePersonAsync(person).Wait();
-            LabelStatusVisibility = true;
-            await Task.Delay(1000);
-            LabelStatusVisibility = false;
+            await ShowLabel(2000);
         }
     }
 }
