@@ -1,7 +1,10 @@
 ﻿using AppXF.Models;
 using AppXF.Views;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +15,6 @@ namespace AppXF
         static Database database;
         public static Database Database
         {
-
             get
             {
                 if (database == null)
@@ -25,9 +27,11 @@ namespace AppXF
 
         public App()
         {
+
             InitializeComponent();
 
             MainPage = new V_TabMain();
+
         }
 
         protected override void OnStart()

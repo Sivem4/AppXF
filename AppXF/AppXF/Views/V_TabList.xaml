@@ -4,12 +4,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppXF.Views.V_TabList"
              x:Name="TabList"
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="List"
              Style="{DynamicResource DefaultContentPage}">
 
+
+    <!--Using Corcav.behaviors library for displaying person table on refreshing-->
+    <b:Interaction.Behaviors>
+        <b:BehaviorCollection>
+            <b:EventToCommand EventName="Appearing" Command="{Binding DisplayListCommand}" />
+        </b:BehaviorCollection>
+    </b:Interaction.Behaviors>
+    
     <ContentPage.Content>
         <StackLayout Margin="15">
             <ListView
