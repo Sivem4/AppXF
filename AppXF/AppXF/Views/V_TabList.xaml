@@ -13,11 +13,11 @@
 
 
     <!--Using Corcav.behaviors library for displaying person table on refreshing-->
-    <b:Interaction.Behaviors>
+    <!--<b:Interaction.Behaviors>
         <b:BehaviorCollection>
             <b:EventToCommand EventName="Appearing" Command="{Binding DisplayListCommand}" />
         </b:BehaviorCollection>
-    </b:Interaction.Behaviors>
+    </b:Interaction.Behaviors>-->
     
     <ContentPage.Content>
         <StackLayout Margin="15">

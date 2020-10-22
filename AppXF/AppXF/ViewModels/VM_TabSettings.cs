@@ -20,7 +20,7 @@ namespace AppXF.ViewModels
 
         public bool ThemeSwitchStatus
         {
-            get { return themeSwitchStatus; }
+            get => themeSwitchStatus;
             set
             {
                 if (themeSwitchStatus != value)

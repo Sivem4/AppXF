@@ -1,6 +1,7 @@
 ﻿using AppXF.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -13,36 +14,40 @@ namespace AppXF.ViewModels
         /// </summary>
         public VM_TabList()
         {
+            LoadListFromDB();
             DeletePersonCommand = new Command<M_Person>(async (p) => await DeletePersonAsync(p));
-            DisplayListCommand = new Command(async () => await DisplayListAsync());
         }
         /// <summary>
         /// Keep track of people in the list
         /// </summary>
         public ObservableCollection<M_Person>  People
         {
-            get
+            get => MS_Common.People;
+            set
             {
-                return MS_Common.People;
+                MS_Common.People = value;
+                OnPropertyChanged(nameof(People));
             }
         }
         public Command<M_Person> DeletePersonCommand { get; }
-        public Command DisplayListCommand { get; }
-
+        /// <summary>
+        /// Delete person from list and database
+        /// </summary>
+        /// <param name="person"></param>
+        /// <returns></returns>
         async Task DeletePersonAsync(M_Person person)
         {
             MS_Common.People.Remove(person);
             await App.Database.DeletePersonAsync(person);
         }
-        async Task DisplayListAsync()
+        /// <summary>
+        /// Load data from database to list
+        /// </summary>
+        /// <returns></returns>
+        async Task LoadListFromDB()
         {
-            var peopleList = await App.Database.GetPeopleAsync();
-            //MS_Common.People = new ObservableCollection<M_Person>(peopleList);
-
-            foreach (var person in peopleList)
-            {
-                MS_Common.People.Add(person);
-            }
+            var list = await App.Database.GetPeopleAsync();
+            People = new ObservableCollection<M_Person>(list);
         }
     }
 }

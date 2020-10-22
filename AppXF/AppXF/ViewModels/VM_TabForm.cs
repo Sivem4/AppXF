@@ -20,7 +20,7 @@ namespace AppXF.ViewModels
         bool labelStatusVisibility;
         public string EntryName
         {
-            get { return entryName; }
+            get => entryName;
             set
             {
                 if (entryName != value)
@@ -32,7 +32,7 @@ namespace AppXF.ViewModels
         }
         public string EntrySurname
         {
-            get { return entrySurname; }
+            get => entrySurname;
             set
             {
                 if (entrySurname != value)
@@ -44,7 +44,7 @@ namespace AppXF.ViewModels
         }
         public bool LabelStatusVisibility
         {
-            get { return labelStatusVisibility; }
+            get => labelStatusVisibility;
             set
             {
                 labelStatusVisibility = value;
@@ -75,12 +75,12 @@ namespace AppXF.ViewModels
         }
 
         /// <summary>
-        /// Add person to list, display conformation label
+        /// Add person to list, database and display conformation label
         /// </summary>
         async Task AddPerson()
         {
             var person = new M_Person() { Name = EntryName, Surname = EntrySurname };
-            //MS_Common.People.Add(person);
+            MS_Common.People.Add(person);
             await App.Database.SavePersonAsync(person);
             ClearForm();
             await ShowLabel(2000);
