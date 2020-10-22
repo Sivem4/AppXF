@@ -14,8 +14,8 @@ namespace AppXF.ViewModels
         /// </summary>
         public VM_TabList()
         {
-            LoadListFromDB();
             DeletePersonCommand = new Command<M_Person>(async (p) => await DeletePersonAsync(p));
+            LoadListFromDB();
         }
         /// <summary>
         /// Keep track of people in the list
@@ -25,8 +25,11 @@ namespace AppXF.ViewModels
             get => MS_Common.People;
             set
             {
-                MS_Common.People = value;
-                OnPropertyChanged(nameof(People));
+                if (MS_Common.People != value)
+                {
+                    MS_Common.People = value;
+                    OnPropertyChanged(nameof(People));
+                }
             }
         }
         public Command<M_Person> DeletePersonCommand { get; }
