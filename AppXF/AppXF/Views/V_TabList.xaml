@@ -41,7 +41,6 @@
                                     <Label
                                         Grid.Row="0"
                                         Grid.Column="0"
-                                        PlaceholderColor="GhostWhite"
                                         Text="{Binding Name}"
                                         d:Text="{Binding .}"/>
                                     <Label
