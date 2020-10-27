@@ -188,11 +188,17 @@
     <Reference Include="DevExpress.Xamarin.iOS.Editors">
       <HintPath>..\..\..\Binaries\DevExpress.Xamarin.iOS.Editors.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Xamarin.iOS.Grid">
+      <HintPath>..\..\..\Binaries\DevExpress.Xamarin.iOS.Grid.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XamarinForms.Core.iOS">
       <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Core.iOS.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XamarinForms.Editors.iOS">
       <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Editors.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XamarinForms.Grid.iOS">
+      <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Grid.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />

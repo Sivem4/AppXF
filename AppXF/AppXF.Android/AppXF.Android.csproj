@@ -48,11 +48,17 @@
     <Reference Include="DevExpress.Xamarin.Android.Editors">
       <HintPath>..\..\..\Binaries\DevExpress.Xamarin.Android.Editors.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Xamarin.Android.Grid">
+      <HintPath>..\..\..\Binaries\DevExpress.Xamarin.Android.Grid.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XamarinForms.Core.Android">
       <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Core.Android.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XamarinForms.Editors.Android">
       <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Editors.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XamarinForms.Grid.Android">
+      <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Grid.Android.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />

@@ -25,6 +25,9 @@
     <Reference Include="DevExpress.XamarinForms.Editors">
       <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Editors.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XamarinForms.Grid">
+      <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Grid.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

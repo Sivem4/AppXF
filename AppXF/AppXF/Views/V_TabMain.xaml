@@ -5,11 +5,11 @@
             xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
             xmlns:v="clr-namespace:AppXF.Views"
             ios:textSize="40"
+            Style="{DynamicResource DefaultTabbedPage}"
             Title="Main">
-    <!--Style="{DynamicResource DefaultTabbedPage}"-->
 
     <!--Setting all new pages here-->
     <v:V_TabForm_Dev/>
-    <v:V_TabList/>
+    <v:V_TabList_Dev/>
     <v:V_TabSettings/>
 </TabbedPage>
