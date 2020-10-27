@@ -7,7 +7,7 @@
             Title="Main">
  
     <!--Setting all new pages here-->
-    <v:V_TabForm/>
+    <v:V_TabForm_Dev/>
     <v:V_TabList/>
     <v:V_TabSettings/>
 </TabbedPage>
