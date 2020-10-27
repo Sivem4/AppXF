@@ -2,10 +2,12 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="AppXF.Views.V_TabMain"
+            xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
             xmlns:v="clr-namespace:AppXF.Views"
-            Style="{DynamicResource DefaultTabbedPage}"
+            ios:textSize="40"
             Title="Main">
- 
+    <!--Style="{DynamicResource DefaultTabbedPage}"-->
+
     <!--Setting all new pages here-->
     <v:V_TabForm_Dev/>
     <v:V_TabList/>
