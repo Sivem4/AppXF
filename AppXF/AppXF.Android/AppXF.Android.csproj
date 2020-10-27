@@ -45,6 +45,15 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Xamarin.Android.Editors">
+      <HintPath>..\..\..\Binaries\DevExpress.Xamarin.Android.Editors.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XamarinForms.Core.Android">
+      <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Core.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XamarinForms.Editors.Android">
+      <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Editors.Android.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
     <Reference Include="System.Core" />

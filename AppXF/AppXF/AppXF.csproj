@@ -18,6 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="DevExpress.XamarinForms.Core">
+      <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XamarinForms.Editors">
+      <HintPath>..\..\..\Binaries\DevExpress.XamarinForms.Editors.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\V_TabMain.xaml.cs">
       <DependentUpon>V_TabMain.xaml</DependentUpon>
     </Compile>
