@@ -8,8 +8,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             Title="List"
-             Style="{DynamicResource DefaultContentPage}">
+             Title="List">
   
     <ContentPage.Content>
         <StackLayout Margin="15">
@@ -41,12 +40,12 @@
                                     <Label
                                         Grid.Row="0"
                                         Grid.Column="0"
-                                        Text="{Binding Name}"
+                                        Text="{Binding FirstName}"
                                         d:Text="{Binding .}"/>
                                     <Label
                                         Grid.Row="0"
                                         Grid.Column="1"
-                                        Text="{Binding Surname}"
+                                        Text="{Binding LastName}"
                                         d:Text="{Binding .}"/>
 
                                     <!--Setting proper binding context for button, CommandParameter is a must for passing proper M_Person into command-->

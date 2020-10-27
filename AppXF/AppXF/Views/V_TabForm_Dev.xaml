@@ -6,7 +6,15 @@
              xmlns:df="clr-namespace:DevExpress.XamarinForms.DataForm;assembly=DevExpress.XamarinForms.Editors"
              xmlns:dxe="clr-namespace:DevExpress.XamarinForms.Editors;assembly=DevExpress.XamarinForms.Editors"
              ios:Page.UseSafeArea="True"
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
              Title="Form">
+
+    <b:Interaction.Behaviors>
+        <b:BehaviorCollection>
+            <b:EventToCommand EventName="Appearing" Command="{Binding ClearFormCommand}" />
+        </b:BehaviorCollection>
+    </b:Interaction.Behaviors>
+    
     <ContentPage.Resources>
         <Style TargetType="dxe:TextEdit">
             <Setter Property="ClearIconVisibility" Value="Never" />
@@ -22,7 +30,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <df:DataFormView
-            CommitMode="Manually"
+            CommitMode="LostFocus"
             ValidationMode="PropertyChanged"
             DataObject="{Binding Model}"
             x:Name="dataForm"

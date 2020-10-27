@@ -12,7 +12,7 @@ namespace AppXF.Models
 
         }
         [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
+        public int PersonID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
