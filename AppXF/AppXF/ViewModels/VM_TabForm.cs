@@ -79,7 +79,7 @@ namespace AppXF.ViewModels
         /// </summary>
         async Task AddPerson()
         {
-            var person = new M_Person() { Name = EntryName, Surname = EntrySurname };
+            var person = new M_Person() { FirstName = EntryName, LastName = EntrySurname };
             MS_Common.People.Add(person);
             await App.Database.SavePersonAsync(person);
             ClearForm();

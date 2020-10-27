@@ -1,7 +1,10 @@
-﻿using DevExpress.XamarinForms.DataForm;
+﻿using AppXF.Models;
+using DevExpress.XamarinForms.DataForm;
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace AppXF.ViewModels
 {
@@ -48,15 +51,26 @@ namespace AppXF.ViewModels
         [DataFormItemPosition(RowOrder = 7)]
         [DataFormTextEditor(InplaceLabelText = "Email", Keyboard = "Email")]
         public string Email { get; set; }
-
         string IDataErrorInfo.Error => String.Empty;
         string IDataErrorInfo.this[string columnName] => String.Empty;
+
     }
     public VM_TabForm_Dev()
         {
             Model = new PersonalInfo();
+            AddPersonCommand = new Command(async () => await AddPerson());
         }
         public PersonalInfo Model { get; set; }
+        public Command AddPersonCommand { get; }
+
+        async Task AddPerson()
+        {
+            var person = new M_Person() { FirstName = Model.FirstName, LastName = Model.LastName };
+            MS_Common.People.Add(person);
+            //await App.Database.SavePersonAsync(person);
+            //ClearForm();
+            //await ShowLabel(2000);
+        }
 
     }
 }
