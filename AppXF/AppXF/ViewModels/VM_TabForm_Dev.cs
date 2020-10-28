@@ -174,7 +174,16 @@ namespace AppXF.ViewModels
             }
             async Task AddPerson()
             {
-                var person = new M_Person() { FirstName = Model.FirstName, LastName = Model.LastName };
+                var person = new M_Person()
+                {
+                    FirstName = Model.FirstName,
+                    LastName = Model.LastName, 
+                    Address = Model.Address, 
+                    City = Model.City, 
+                    ZipCode = Model.ZipCode, 
+                    Mobile = Model.Mobile,
+                    Email = Model.Email
+                };
                 MS_Common.People.Add(person);
                 await App.Database.SavePersonAsync(person);
                 ClearForm();

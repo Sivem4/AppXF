@@ -30,7 +30,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <df:DataFormView
-            CommitMode="LostFocus"
+            CommitMode="PropertyChanged"
             ValidationMode="PropertyChanged"
             DataObject="{Binding Model}"
             x:Name="dataForm"

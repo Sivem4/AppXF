@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace AppXF.Views
 {
@@ -16,7 +16,7 @@ namespace AppXF.Views
         public V_TabList_Dev()
         {
             InitializeComponent();
-            BindingContext = new VM_TabList_Dev();
+            BindingContext = new VM_TabList_Dev(grid);
         }
     }
 }

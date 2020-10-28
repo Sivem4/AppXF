@@ -1,4 +1,5 @@
 ﻿using AppXF.Models;
+using DevExpress.XamarinForms.DataGrid;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,9 +11,10 @@ namespace AppXF.ViewModels
 {
     class VM_TabList_Dev : VM_BaseModel
     {
-        public VM_TabList_Dev()
+        public VM_TabList_Dev(DataGridView dataGridView)
         {
             DeletePersonCommand = new Command<M_Person>(async (p) => await DeletePersonAsync(p));
+            EditPersonCommand = new Command((g) => EditPerson(dataGridView, SelectedItem));
             LoadListFromDB();
         }
         public ObservableCollection<M_Person> People
@@ -27,7 +29,21 @@ namespace AppXF.ViewModels
                 }
             }
         }
+        public M_Person SelectedItem
+        {
+            get => selectedItem;
+            set
+            {
+                if (selectedItem != value)
+                {
+                    selectedItem = value;
+                    OnPropertyChanged(nameof(SelectedItem));
+                }
+            }
+        }
+        M_Person selectedItem;
         public Command<M_Person> DeletePersonCommand { get; }
+        public Command EditPersonCommand { get; }
         async Task DeletePersonAsync(M_Person person)
         {
             MS_Common.People.Remove(person);
@@ -37,6 +53,11 @@ namespace AppXF.ViewModels
         {
             var list = await App.Database.GetPeopleAsync();
             People = new ObservableCollection<M_Person>(list);
+        }
+        void EditPerson(DataGridView dataGridView, M_Person selectedItem)
+        {
+            var editFormPage = new EditFormPage(dataGridView, dataGridView.SelectedItem);
+            App.Current.MainPage.Navigation.PushModalAsync(editFormPage);
         }
     }
 }
