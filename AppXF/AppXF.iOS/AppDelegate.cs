@@ -23,6 +23,7 @@ namespace AppXF.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             DevExpress.XamarinForms.Editors.Editors.Init();
+            DevExpress.XamarinForms.DataGrid.DataGrid.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

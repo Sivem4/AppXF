@@ -4,8 +4,8 @@
 
     <!--pages-->
     <Color x:Key="ContentPageBackgroundColor">GhostWhite</Color>
-    <Color x:Key="TabbedPageBackgroundColor">MintCream</Color>
-    <Color x:Key="TabbedPageSelectedColor">MediumAquaMArine</Color>
+    <Color x:Key="TabbedPageBackgroundColor">#e6ffff</Color>
+    <Color x:Key="TabbedPageSelectedColor">#0099cc</Color>
     <Color x:Key="TabbedPageUnselectedColor">DimGray</Color>
     
     <!--text-->

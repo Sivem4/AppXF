@@ -3,12 +3,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                            xmlns:dxg="clr-namespace:DevExpress.XamarinForms.DataGrid;assembly=DevExpress.XamarinForms.Grid"
-                           xmlns:views="clr-namespace:AppXF.Views;assembly=AppXF"
                            x:Class="AppXF.Views.V_TabList_Dev"
                            Title="List">
   
     <ContentPage.Content>
-        <dxg:DataGridView x:Name="grid" ItemsSource="{Binding People}" SelectedItem="{Binding SelectedItem}">
+        <dxg:DataGridView x:Name="grid" ItemsSource="{Binding People}" SelectedItem="{Binding SelectedItem}" BackgroundColor="{DynamicResource ContentPageBackgroundColor}">
             <dxg:DataGridView.StartSwipeItems>
                 <dxg:SwipeItem Caption="Edit" BackgroundColor="#797bff" Command="{Binding EditPersonCommand}"/>
             </dxg:DataGridView.StartSwipeItems>
@@ -16,14 +15,14 @@
                 <dxg:SwipeItem Caption="Remove" BackgroundColor="#ff3b30" Command="{Binding DeletePersonCommand}"/>
             </dxg:DataGridView.EndSwipeItems>
             <dxg:DataGridView.Columns>
-                <dxg:TextColumn FieldName="FirstName" Caption="First name" Width="100">
+                <dxg:TextColumn FieldName="FirstName" Caption="First name" Width="100" BackgroundColor="#e6ffff" >
                     <dxg:TextColumn.Width>
                         <OnIdiom x:TypeArguments="GridLength" Phone="110" Tablet="150"/>
                     </dxg:TextColumn.Width>
                 </dxg:TextColumn>
-                <dxg:TextColumn FieldName="LastName" Caption="Last name" Width="100"/>
-                <dxg:TextColumn FieldName="Mobile" />
-                <dxg:TextColumn FieldName="Email" />
+                <dxg:TextColumn FieldName="LastName" Caption="Last name" Width="100" BackgroundColor="#e6ffff"/>
+                <dxg:TextColumn FieldName="Mobile" BackgroundColor="#e6ffff"/>
+                <dxg:TextColumn FieldName="Email"  BackgroundColor="#e6ffff"/>
             </dxg:DataGridView.Columns>
         </dxg:DataGridView>
     </ContentPage.Content>

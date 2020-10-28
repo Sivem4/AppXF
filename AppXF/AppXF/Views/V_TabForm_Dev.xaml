@@ -39,6 +39,6 @@
             EditorHorizontalSpacing="10"
             ReserveBottomTextLine="True"
             Margin="0,0,10,0"/>
-        <dxe:SimpleButton Grid.Row="1" TextColor="White" Padding="22" BackgroundColor="#2088ff" Text="ADD" Command="{Binding AddPersonCommand}"/>
+        <dxe:SimpleButton Grid.Row="1" TextColor="#0099cc" Padding="22" BackgroundColor="#e6ffff" Text="ADD" Command="{Binding AddPersonCommand}"/>
     </Grid>
 </ContentPage>
